@@ -228,8 +228,8 @@ PlayerSettings:
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
+  AndroidTangoUsesCamera: 1
   androidEnableBanner: 1
-  androidUseLowAccuracyLocation: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -600,7 +600,8 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: c4f7553c-0121-44fe-9b84-9f5a015000c1

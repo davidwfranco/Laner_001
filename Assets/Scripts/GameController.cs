@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour {
 	public static GameController instance;
@@ -12,6 +14,9 @@ public class GameController : MonoBehaviour {
     public float maxHeigth;
 
     public bool gameOver;
+
+    public float bulletVSpeed;
+    public float bulletHSpeed;
 
     // Use this for initialization && guarantee that there's
     // only one instance of the GameController
@@ -39,6 +44,13 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//Restart the Game
+		if (gameOver && Input.anyKey) {
+			//Make unity reload the scene currenctly active
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
+    public void Endgame() {
+        gameOver = true;
+    }
 }
