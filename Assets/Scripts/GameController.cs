@@ -7,14 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 	public static GameController instance;
 	public Camera cam;
-
     public Vector2 upperCorner;
     public Vector2 targeCamtWidth;
     public float maxWidth;
     public float maxHeigth;
-
     public bool gameOver;
-
+    public GameObject gameOverText;
     public float bulletVSpeed;
     public float bulletHSpeed;
 
@@ -52,5 +50,6 @@ public class GameController : MonoBehaviour {
 	}
     public void Endgame() {
         gameOver = true;
+        gameOverText.SetActive(true);
     }
 }
